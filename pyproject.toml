@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sufficiency-mri"
+version = "0.2.0"
+description = "Physics-parameterised MRI acquisition simulator for diagnostic sufficiency studies"
+authors = [{ name = "Ilerioluwakiiye Abolade" }]
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "scipy>=1.10", "nibabel>=5.0", "scikit-image>=0.21", "pyyaml>=6.0", "tqdm>=4.65", "matplotlib>=3.7"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools]
+packages = ["sufficiency"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
